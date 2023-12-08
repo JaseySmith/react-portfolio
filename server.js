@@ -10,6 +10,7 @@ app.use(cors({
   origin: ['http://localhost:3000', 'https://jaseysmith.com']
 }));
 app.use(express.json());
+app.options("/contact", cors());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
 
