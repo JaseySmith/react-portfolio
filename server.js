@@ -7,10 +7,10 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://jaseysmith.com']
+  origin: ['http://localhost:3000', 'https://jaseysmith.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 }));
 app.use(express.json());
-app.options("/contact", cors());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
 
