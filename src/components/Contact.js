@@ -10,12 +10,12 @@ function Contact() {
             <FontAwesomeIcon icon={faComments} />
             <h2>Say Hello!</h2>
             <p className="text mb-40">Ready to collaborate or have any questions? Feel free to reach out anytime. <br></br>Excited to create with you.</p>
-            <form netlify>
+            <form name="contact" method="post">
+                <input type="hidden" name="form-name" value="contact"></input>
                 <input type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z]+" title="Only letters are allowed" required></input>
                 <input type="email" id="email" name="email" placeholder="Enter email" required></input>
                 <textarea name="message" id="message" placeholder="How may I help?"></textarea>
                 <button className="btn" type="submit" name="submit" value="Send Message">Send Message</button>
-                <input type="hidden" name="form-name" value="contact"></input>
             </form>
         </div>
     </div>
