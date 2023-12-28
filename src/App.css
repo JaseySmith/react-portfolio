@@ -234,8 +234,8 @@ h1 {
 }
 
 .btn {
-  color: #00cc9c;
-  background-color: transparent;
+  color: var(--light);
+  background-color: #00cc9c;
   border: 2px solid #00cc9c;
   padding: 18px 32px;
   border-radius: 10px;
@@ -247,8 +247,8 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #00cc9c;
-  color: var(--light);
+  background-color: transparent;
+  color: #00cc9c;
 }
 
 .alt-btn {
