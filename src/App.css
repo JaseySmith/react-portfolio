@@ -51,7 +51,6 @@ button {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.6;
-  opacity: 0.75;
 }
 
 .mb-40 {
@@ -131,7 +130,7 @@ header {
   display: inline-block;
   height: 20px;
   width: 100%;
-  border-bottom: 2px solid #00cc9c;
+  border-bottom: 2px solid var(--dark);
   opacity: 0;
 	-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
 	transition: opacity 0.2s, transform 0.2s;
@@ -200,6 +199,12 @@ header {
   width: 100%;
 }
 
+.content .flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .background, #tsparticles {
   position: absolute;
   top: 0;
@@ -211,12 +216,12 @@ header {
 
 h1 {
   font-size: 3em;
-  margin: 24px 0;
+  margin: 32px 0;
 }
 
 #about .text {
   font-size: 1em;
-  margin-bottom: 58px;
+  margin-bottom: 40px;
 }
 
 #about span {
@@ -229,8 +234,8 @@ h1 {
 }
 
 .btn {
-  background-color: #00cc9c;
-  color: var(--light);
+  color: #00cc9c;
+  background-color: transparent;
   border: 2px solid #00cc9c;
   padding: 18px 32px;
   border-radius: 10px;
@@ -242,21 +247,42 @@ h1 {
 }
 
 .btn:hover {
-  background-color: transparent;
-  color: hsl(166, 100%, 40%);
+  background-color: #00cc9c;
+  color: var(--light);
+}
+
+.alt-btn {
+  color: var(--dark);
+  padding: 18px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.alt-btn span {
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.alt-btn:hover span{
+  opacity: 1;
+  margin-left: 5px;
 }
 
 .social-menu {
-  margin-top: 64px;
+  margin-left: 40px;
 }
 
 .social-menu a {
   text-decoration: none;
   color: var(--dark);
-  opacity: 0.75;
+  opacity: 0.8;
   font-size: 1.2em;
   padding: 2px;
-  margin-right: 26px;
+  margin-right: 32px;
   transition: all 0.2s;
 }
 
@@ -568,6 +594,19 @@ footer nav a {
     text-align: center;
   }
 
+  .btn {
+    background-color: #00cc9c;
+    color: var(--light);
+  }
+
+  .alt-btn {
+    display: none;
+  }
+
+  .content .flex {
+    justify-content: center;
+  }
+
   #about .text {
     margin-bottom: 32px;
   }
@@ -636,5 +675,31 @@ footer nav a {
 
   footer {
     padding: 32px 15%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .header-container {
+    padding: 16px 20%;
+  }
+
+  #about {
+    padding: 0 40% 0 20%;
+  }
+
+  #projects {
+    padding: 128px 20% 40px;
+  }
+
+  #skills {
+    padding: 128px 20% 40px;
+  }
+
+  #contact form {
+    padding: 0 25%; /* 5% is on #contact */
+  }
+
+  footer {
+    padding: 32px 20%;
   }
 }
