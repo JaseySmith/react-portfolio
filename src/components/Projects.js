@@ -45,12 +45,12 @@ function Projects() {
                 </a>
               </div>
               <div className="card">
-                <a href="http://www.jaseysmith.com" target="_blank" rel="noreferrer">
-                  <img src={Project4} alt="jaseysmith.com" />
+                <a href="https://codepen.io/JaseySmith/full/wvjrJvg" target="_blank" rel="noreferrer">
+                  <img src={Project4} alt="To-do List" />
                   <div className="overlay">
-                    <p className="green-text">React, Node, & Express</p>
-                    <h3>Portfolio Website</h3>
-                    <p className="text">Dynamic React portfolio with Express & Node. Features React components and Nodemailer integration for interactive content and contact forms.</p>
+                    <p className="green-text">React & CSS</p>
+                    <h3>CRUD App</h3>
+                    <p className="text">Efficient to-do list crafted with React and CSS for seamlessly managing tasks in a minimalist interface.</p>
                   </div>
                 </a>
               </div>
