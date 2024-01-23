@@ -49,7 +49,7 @@ button {
 
 .text {
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.6;
 }
 
@@ -118,6 +118,7 @@ header {
 }
 
 .nav-menu a {
+  font-weight: 500;
   position: relative;
   display: inline-block;
   margin-left: 32px;
@@ -128,7 +129,7 @@ header {
   position: absolute;
   left: 0;
   display: inline-block;
-  height: 20px;
+  height: 18px;
   width: 100%;
   border-bottom: 1px solid var(--dark);
   opacity: 0;
@@ -216,15 +217,15 @@ header {
 
 h1 {
   font-size: 3em;
-  margin: 24px 0;
+  margin: 16px 0;
 }
 
 #about .text {
   font-size: 1em;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
-#about span {
+#about .text span {
   font-weight: 800;
 }
 
@@ -410,7 +411,7 @@ h3 {
 
 #skills .alt-text {
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.6;
   margin-left: 16px;
 }
@@ -436,7 +437,7 @@ h3 {
 
 #contact input[type="text"], input[type="email"],textarea {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1em;
   width: 100%;
   padding: 18px;
