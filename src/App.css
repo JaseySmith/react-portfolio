@@ -1,6 +1,5 @@
 /* --- Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
 
@@ -39,32 +38,30 @@ body {
   line-height: 1;
   background-color: var(--light);
   color: var(--dark);
-  transition: all 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .text {
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.mb-40 {
-  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 
 
 /* --- Navigation --- */
-header {
-  background-color: var(--light);
+.header {
   position: fixed;
   z-index: 10;
   width: 100%;
+  transition: all 0.2s;
+}
+
+.scrolled {
+  background-color: var(--light);
   transition: all 0.2s;
 }
 
@@ -79,31 +76,18 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
+  font-size: 42px;
   text-decoration: none;
-  margin-left: -4px;
   line-height: 1;
-  transform: scale(0.9);
+  transition: all 0.2s;
 }
 
 #logo .j {
-  color: var(--light);
-  background-color: #00cc9c;
-  padding: 5px 15px;
-  border-radius: 50%;
-  transition: all 0.2s;
+  color: #00cc9c;
 }
 
 #logo .s {
-  z-index: -1;
-  margin-left: -10px;
-  color: var(--light);
-  background-color: var(--dark);
-  border-radius: 50%;
-  padding: 5px 15px;
-  transition: all 0.2s;
+  color: var(--dark);
 }
 
 .nav-menu {
@@ -112,37 +96,18 @@ header {
   justify-content: flex-end;
 }
 
-.hover-effect {
+.nav-menu a {
   text-decoration: none;
   color: var(--dark);
-}
-
-.nav-menu a {
   font-weight: 500;
   position: relative;
   display: inline-block;
-  margin-left: 32px;
+  margin: 0 16px;
+  transition: 0.2s;
 }
 
-.nav-menu a.hover-effect:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  height: 18px;
-  width: 100%;
-  border-bottom: 1px solid var(--dark);
-  opacity: 0;
-	-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
-	transition: opacity 0.2s, transform 0.2s;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
-}
-
-.nav-menu a.hover-effect:hover:after {
-  opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+.nav-menu a:hover {
+  color: #00cc9c;
 }
 
 
@@ -165,7 +130,7 @@ header {
 
 /* --- Dark Mode Switch --- */
 #toggle {
-  margin: 0 0 0 32px;
+  margin: 0 0 0 16px;
   display: inline-block;
 }
 
@@ -175,17 +140,17 @@ header {
 
 .fa-circle-half-stroke {
   cursor: pointer;
-  font-size: 1.3em;
+  font-size: 18px;
   color: var(--dark-to-light);
   transition: all 0.2s;
 }
 
 
 
-/* --- about --- */
-#about {
+/* --- home --- */
+#home {
   position: relative;
-  padding: 0 30% 0 10%;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,16 +159,8 @@ header {
   z-index: 1;
 }
 
-#about .content {
+#home .content {
   z-index: 1;
-  text-align: left;
-  width: 100%;
-}
-
-.content .flex {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 .background, #tsparticles {
@@ -216,79 +173,100 @@ header {
 }
 
 h1 {
-  font-size: 3em;
-  margin: 16px 0;
+  font-size: 42px;
+  letter-spacing: -3px;
+  margin: 0 0 16px;
 }
 
-#about .text {
-  font-size: 1em;
-  margin-bottom: 32px;
-}
-
-#about .text span {
-  font-weight: 800;
-}
-
-#about .text a {
-  color: var(--dark);
-  transition: all 0.2s;
+#home .text {
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 24px;
 }
 
 .btn {
-  color: var(--light);
+  display: inline-block;
   background-color: #00cc9c;
+  color: var(--light);
   border: 2px solid #00cc9c;
   padding: 18px 32px;
   border-radius: 10px;
-  font-weight: 600;
-  font-size: 1em;
+  font-weight: 500;
+  font-size: 16px;
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.2s;
 }
 
 .btn:hover {
+  color: #00cc9c;
   background-color: transparent;
+}
+
+
+
+/* --- About --- */
+#about {
+  padding: 128px 10% 40px;
+}
+
+.fa-user {
+  font-size: 26px;
+  padding-bottom: 16px;
+}
+
+h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  letter-spacing: -2px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#about .flex .text {
+  text-align: left;
+  width: 50%;
+  padding-right: 40px;
+}
+
+#about a {
   color: #00cc9c;
 }
 
-.alt-btn {
-  color: var(--dark);
-  padding: 18px 24px;
+#about .container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 50fr 50fr;
+  grid-template-rows: auto auto auto auto;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  gap: 16px;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  background-color: var(--shade);
   border-radius: 10px;
-  font-weight: 600;
-  font-size: 1em;
-  text-decoration: none;
-  cursor: pointer;
   transition: all 0.2s;
+  padding: 16px;
 }
 
-.alt-btn span {
-  opacity: 0;
-  transition: all 0.2s;
+.fa-circle-check {
+  font-size: 26px;
+  color: #00cc9c;
 }
 
-.alt-btn:hover span{
-  opacity: 1;
-  margin-left: 4px;
-}
-
-.social-menu {
-  margin-left: 40px;
-}
-
-.social-menu a {
-  text-decoration: none;
-  color: var(--dark);
-  opacity: 0.8;
-  font-size: 1.2em;
-  padding: 2px;
-  margin-right: 32px;
-  transition: all 0.2s;
-}
-
-.social-menu a:hover {
-  opacity: 1;
+#about .alt-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 16px;
 }
 
 
@@ -298,19 +276,14 @@ h1 {
   padding: 128px 10% 40px;
 }
 
-.fa-code {
-  font-size: 32px;
+.fa-cubes {
+  font-size: 26px;
   padding-bottom: 16px;
-}
-
-h2 {
-  font-size: 2.5em;
-  margin-bottom: 16px;
 }
 
 #projects .container {
   display: grid;
-  grid-template-columns: 50fr 50fr;
+  grid-template-columns: 33fr 33fr 33fr;
   grid-template-rows: auto auto;
   justify-content: center;
   align-items: center;
@@ -320,7 +293,6 @@ h2 {
 .card {
   position: relative;
   width: 100%;
-  
 }
 
 #projects img {
@@ -355,64 +327,38 @@ h2 {
 .card:hover .overlay {
   opacity: 1;
 }
-
+/* NOt green text anymore plz change */
 .green-text {
-  color: #00cc9c;
-  font-weight: 600;
-  margin-bottom: 8px;
+  color: var(--light);
+  margin-bottom: 12px;
+}
+
+.green-text span {
+  background-color: #00cc9c;
+  padding: 2px 8px;
+  margin: 0 4px;
+  border-radius: 5px;
 }
 
 h3 {
   color: var(--dark);
-  font-size: 1.5em;
+  font-size: 26px;
+  font-weight: 400;
   margin-bottom: 16px;
+  letter-spacing: -1px;
   transition: all 0.2s;
 }
 
 .overlay .text {
   color: var(--dark);
   transition: all 0.2s;
+  margin-bottom: 16px;
 }
 
-
-
-/* --- Skills --- */
-#skills {
-  padding: 128px 10% 40px;
-}
-
-.fa-microchip {
-  font-size: 32px;
-  padding-bottom: 16px;
-}
-
-#skills .container {
-  display: grid;
-  grid-template-columns: 50fr 50fr;
-  grid-template-rows: auto auto auto auto;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-.flexbox {
-  display: flex;
-  align-items: center;
-  background-color: var(--shade);
-  border-radius: 10px;
-  transition: all 0.2s;
-  padding: 18px;
-}
-
-.fa-circle-check {
-  font-size: 24px;
-  color: #00cc9c;
-}
-
-#skills .alt-text {
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1.6;
+.fa-arrow-up-right-from-square {
+  font-size: 26px;
+  color: var(--dark);
+  opacity: 0.9;
   margin-left: 16px;
 }
 
@@ -420,12 +366,20 @@ h3 {
 
 /* --- Contact --- */
 #contact {
-  padding: 128px 5% 40px;
+  padding: 128px 5%;
 }
 
 .fa-comments {
-  font-size: 32px;
+  font-size: 26px;
   padding-bottom: 16px;
+}
+
+#contact h2 {
+  margin: 0 0 16px;
+}
+
+#contact .text {
+  margin-bottom: 24px;
 }
 
 #contact form {
@@ -435,8 +389,15 @@ h3 {
   padding: 0 20%;
 }
 
+.flex-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #contact input[type="text"], input[type="email"],textarea {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 1em;
   width: 100%;
@@ -449,37 +410,40 @@ h3 {
   transition: all 0.2s;
 }
 
+input[type="text"] {
+  margin: 0 4px 4px 0;
+}
+
 form textarea {
-  height: 12em;
+  height: 240px;
   resize: vertical;
-  min-height: 10em;
-  max-height: 40em;
+  min-height: 120px;
+  max-height: 480px;
   display: block;
 }
 
 form .btn {
-  width: auto;
   margin-top: 28px;
 }
 
 ::-webkit-input-placeholder {
   color: var(--dark);
   transition: color 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans", sans-serif;
   opacity: 0.75;
 }
 
 ::-moz-placeholder {
   color: var(--dark);
   transition: color 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans", sans-serif;
   opacity: 0.75;
 }
 
 ::-ms-input-placeholder {
   color: var(--dark);
   transition: color 0.2s;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Open Sans", sans-serif;
   opacity: 0.75;
 }
 
@@ -487,7 +451,7 @@ form .btn {
 
 /* --- Footer --- */
 footer {
-  padding: 32px 10%;
+  padding: 40px 10%;
   border-top: 2px solid var(--shade);
   display: flex;
   justify-content: center;
@@ -502,8 +466,7 @@ footer nav {
 }
 
 footer nav a {
-  font-weight: 600;
-  font-size: 0.8em;
+  font-size: 18px;
   text-decoration: none;
   color: var(--dark);
   padding: 2px;
@@ -513,8 +476,12 @@ footer nav a {
   line-height: 2;
 }
 
+footer nav a:hover {
+  color: #00cc9c;
+}
+
 .copyright {
-  font-size: 0.8em;
+  font-size: 14px;
   margin-right: 16px;
 }
 
@@ -545,10 +512,6 @@ footer nav a {
 
   .nav-menu a {
     margin: 0;
-  }
-
-  .hover-effect {
-    text-decoration: none;
     padding: 18px;
   }
 
@@ -566,7 +529,7 @@ footer nav a {
     display: block;
   }
 
-  #about {
+  #home {
     padding: 0 5%;
   }
 
@@ -579,59 +542,51 @@ footer nav a {
     grid-template-rows: auto auto auto auto;
   }
 
-  #skills {
+  #about {
     padding: 128px 5% 40px;
   }
 
   footer {
-    padding: 32px 5%;
+    padding: 40px 5%;
   }
 }
 
 @media screen and (max-width: 766px) {
-  h1 {
-    font-size: 2.5em;
-  }
-
-  #about .content {
+  #home .content {
     text-align: center;
   }
 
+  #home .text br {
+    display: none;
+  }
+
+  #home .text {
+    font-size: 24px;
+  }
+
   .btn {
-    background-color: #00cc9c;
-    color: var(--light);
+    display: block;
+    width: 100%;
   }
 
-  .alt-btn {
-    display: none;
+  .flex {
+    flex-direction: column;
   }
 
-  .content .flex {
+  #about .flex .text {
+    width: 100%;
+    padding: 0 0 40px;
+  }
+  
+  #about .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-rows: auto auto auto auto;
     justify-content: center;
-  }
-
-  #about .text {
-    margin-bottom: 32px;
-  }
-
-  .hide-on-mobile {
-    display: none;
-  }
-
-  .social-menu a {
-    margin: 12px;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-
-  #projects br {
-    display: none;
-  }
-
-  #skills br {
-    display: none;
+    align-items: center;
+    padding: 0;
+    gap: 16px;
   }
 
   #contact br {
@@ -640,6 +595,10 @@ footer nav a {
 
   #contact form {
     padding: 0;
+  }
+
+  .flex-form {
+    flex-direction: column;
   }
 
   footer {
@@ -660,24 +619,24 @@ footer nav a {
     padding: 16px 15%;
   }
 
-  #about {
-    padding: 0 30% 0 15%;
+  #home {
+    padding: 0 30%;
   }
 
   #projects {
     padding: 128px 15% 40px;
   }
 
-  #skills {
+  #about {
     padding: 128px 15% 40px;
   }
 
   #contact form {
-    padding: 0 25%; /* 5% is on #contact */
+    padding: 0 31%; /* 5% is on #contact */
   }
 
   footer {
-    padding: 32px 15%;
+    padding: 40px 15%;
   }
 }
 
@@ -686,23 +645,23 @@ footer nav a {
     padding: 16px 20%;
   }
 
-  #about {
-    padding: 0 40% 0 20%;
+  #home {
+    padding: 0 33%;
   }
 
   #projects {
     padding: 128px 20% 40px;
   }
 
-  #skills {
+  #about {
     padding: 128px 20% 40px;
   }
 
   #contact form {
-    padding: 0 25%; /* 5% is on #contact */
+    padding: 0 31%; /* 5% is on #contact */
   }
 
   footer {
-    padding: 32px 20%;
+    padding: 40px 20%;
   }
 }

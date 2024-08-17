@@ -51,7 +51,7 @@ const Background = () => {
               }
             },
             opacity: {
-              value: 0.5,
+              value: 0.4,
               random: false,
               anim: {
                 enable: false,
@@ -65,7 +65,7 @@ const Background = () => {
               random: true,
               anim: {
                 enable: false,
-                speed: 40,
+                speed: 5,
                 size_min: 0.1,
                 sync: false
               }

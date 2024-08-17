@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComments } from '@fortawesome/free-regular-svg-icons';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
 
@@ -26,12 +26,15 @@ function Contact() {
     <div>
         <div id="contact">
             <FontAwesomeIcon icon={faComments} />
-            <h2>Say Hello!</h2>
-            <p className="text mb-40">Ready to collaborate or have any questions? Feel free to reach out anytime. <br></br>Excited to create with you.</p>
+            <h2>Contact Me</h2>
+            <p className="text">If you have any questions or would like to discuss a project,<br></br> feel free to reach out.</p>
             <form name="contact" method="post" onSubmit={handleSubmit}>
+              <div className="flex-form">
                 <input type="hidden" name="form-name" value="contact"></input>
                 <input type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z ]+" title="Only letters are allowed" required></input>
                 <input type="email" id="email" name="email" placeholder="Enter email" required></input>
+              </div>
+                
                 <textarea name="message" id="message" placeholder="How may I help?"></textarea>
                 <button className="btn" type="submit" name="submit" value="Send Message">Send Message</button>
             </form>

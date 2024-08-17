@@ -1,17 +1,23 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faCodepen } from '@fortawesome/free-brands-svg-icons';
 
 
 function Footer() {
   return (
     <div>
         <footer>
-          <p className="text copyright">JASEYSMITH © 2023</p>
+          <p className="text copyright">JASEYSMITH © 2024</p>
           <nav>
-            <a href="https://www.instagram.com/jaseyhsmith/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://github.com/JaseySmith" target="_blank" rel="noreferrer">Github</a>
-            <a href="mailto:jaseyhsmith@gmail.com" target="_blank" rel="noreferrer">Email</a>
-            <a href="https://www.linkedin.com/in/jasey-smith-34594a15b/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://codepen.io/JaseySmith" target="_blank" rel="noreferrer">Codepen</a>
+            <a href="https://www.instagram.com/jaseyhsmith/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
+            <a href="https://github.com/JaseySmith" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+            <a href="mailto:jaseyhsmith@gmail.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEnvelope} /></a>
+            <a href="https://www.linkedin.com/in/jasey-smith-34594a15b/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+            <a href="https://codepen.io/JaseySmith" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCodepen} /></a>
           </nav>
         </footer>
     </div>

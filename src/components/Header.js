@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DarkModeToggle from './DarkMode';
 
 export default function Header() {
@@ -9,8 +9,15 @@ export default function Header() {
     setIsNavExpanded(!isNavExpanded);
   };
 
+  const [scroll, setScroll] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 74)
+    })
+  }, [])
+
   return (
-    <header>
+    <header className={scroll ? "header scrolled" : "header"}>
       <div className="header-container">
         {/* Logo */}
         <div className="logo-container">
@@ -24,10 +31,10 @@ export default function Header() {
         <nav className={
           isNavExpanded ? "nav-menu expanded" : "nav-menu"
         }>
-          <a onClick={handleNavClick} className="hover-effect" href="#about">About</a>
-          <a onClick={handleNavClick} className="hover-effect" href="#projects">Projects</a>
-          <a onClick={handleNavClick} className="hover-effect" href="#skills">Skills</a>
-          <a onClick={handleNavClick} className="hover-effect" href="#contact">Contact</a>
+          <a onClick={handleNavClick} href="#home">Home</a>
+          <a onClick={handleNavClick} href="#about">About</a>
+          <a onClick={handleNavClick} href="#projects">Projects</a>
+          <a onClick={handleNavClick} href="#contact">Contact</a>
           <DarkModeToggle />
         </nav>
         <div className="burger"
