@@ -5,15 +5,15 @@
 
 /* --- Variables --- */
 :root {
-  --light: #F6F7F9;
-  --dark: #2A2D3C;
-  --shade: #E7E9EF;
+  --light: #F8F9FA;
+  --dark: #2B3035;
+  --shade: #E9ECEF;
 }
 
 [data-theme="dark"] {
-  --light: #191B24;
-  --dark: #E7E9EF;
-  --shade: #2A2D3C;
+  --light: #212529;
+  --dark: #E9ECEF;
+  --shade: #2B3035;
 }
 
 
@@ -76,6 +76,8 @@ button {
   justify-content: center;
   align-items: center;
   font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -3px;
   text-decoration: none;
   line-height: 1;
   transition: all 0.2s;
@@ -87,6 +89,7 @@ button {
 
 #logo .s {
   color: var(--dark);
+  transform: rotateZ(-1deg);
 }
 
 .nav-menu {
