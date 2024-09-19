@@ -15,7 +15,9 @@ function About() {
   return (
     <div>
         <div id="about">
-            <FontAwesomeIcon icon={faUser} data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50" />
+            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50">
+              <FontAwesomeIcon icon={faUser} />
+            </div>
             <h2 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100">About Me</h2>
             <div className="flex">
               <p className="text" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="150">Hi, I'm Jasey, a full-stack web developer. My journey into the world of coding began four years ago when I discovered the endless possibilities it offered. This discovery drove me to start my formal education through <a href="https://www.freecodecamp.org/" target="_blank" rel="noreferrer">freeCodeCamp.org.</a><br></br><br></br>

@@ -223,6 +223,7 @@ h1 {
 .fa-user {
   font-size: 26px;
   padding-bottom: 16px;
+  position: relative;
 }
 
 h2 {

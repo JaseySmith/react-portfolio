@@ -31,7 +31,9 @@ function Contact() {
   return (
     <div>
         <div id="contact">
-            <FontAwesomeIcon icon={faComments} data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50" />
+            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50">
+              <FontAwesomeIcon icon={faComments} />
+            </div>
             <h2 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100">Contact Me</h2>
             <p className="text" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="150">If you have any questions or would like to discuss a project,<br></br> feel free to reach out.</p>
             <form name="contact" method="post" onSubmit={handleSubmit}>

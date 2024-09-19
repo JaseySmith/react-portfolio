@@ -20,7 +20,9 @@ function Projects() {
   return (
     <div>
         <div id="projects">
-          <FontAwesomeIcon icon={faCubes} data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50" />
+            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50">
+              <FontAwesomeIcon icon={faCubes} />
+            </div>
             <h2 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100">My Projects</h2>
             <div className="container">
               <div className="card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="150">
