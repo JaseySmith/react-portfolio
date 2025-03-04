@@ -11,7 +11,7 @@ function Footer() {
   return (
     <div>
         <footer>
-          <p className="text copyright">JASEYSMITH © 2024</p>
+          <p className="text copyright">JASEYSMITH © 2025</p>
           <nav>
             <a href="https://www.instagram.com/jaseyhsmith/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
             <a href="https://github.com/JaseySmith" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
