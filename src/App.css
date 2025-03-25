@@ -1,5 +1,6 @@
 /* --- Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
 
 
 
@@ -39,7 +40,7 @@ body {
   line-height: 1;
   background-color: var(--light);
   color: var(--dark);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Tektur", sans-serif;
 }
 
 button {
@@ -72,25 +73,18 @@ button {
   padding: 16px 10%;
 }
 
-#logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 42px;
-  font-weight: 500;
-  letter-spacing: -3px;
+.logo-container a {
   text-decoration: none;
+}
+
+#logo {
+  font-family: "Tektur", sans-serif;
+  font-size: 42px;
+  color: var(--dark);
+  letter-spacing: 1px;
+  font-weight: bolder;
   line-height: 1;
   transition: all 0.2s;
-}
-
-#logo .j {
-  color: #00cc9c;
-}
-
-#logo .s {
-  color: var(--dark);
-  transform: rotateZ(-1deg);
 }
 
 .nav-menu {
@@ -132,20 +126,50 @@ button {
 
 
 /* --- Dark Mode Switch --- */
-#toggle {
-  margin: 0 0 0 16px;
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  margin-left: 16px;
   display: inline-block;
 }
 
-#toggle input {
-  display: none;
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.fa-circle-half-stroke {
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #DCE0E5;
+  border-radius: 34px;
+  transition: 0.4s;
   cursor: pointer;
-  font-size: 18px;
-  color: var(--dark-to-light);
-  transition: all 0.2s;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--light);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: #00cc9c;
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(24px);
 }
 
 
@@ -177,9 +201,9 @@ button {
 
 h1 {
   font-size: 42px;
-  letter-spacing: -3px;
   margin: 0 0 16px;
   opacity: 0;
+  letter-spacing: -1px;
   transition: transform ease-in-out;
 }
 
@@ -187,7 +211,6 @@ h1 {
   font-size: 26px;
   line-height: 1.2;
   margin-bottom: 24px;
-  animation-delay: 0.2s;
   opacity: 0;
   transition: transform ease-in-out;
 }
@@ -198,12 +221,11 @@ h1 {
   color: var(--light);
   border: 2px solid #00cc9c;
   padding: 18px 32px;
-  border-radius: 10px;
+  border-radius: 50px;
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
   cursor: pointer;
-  animation-delay: 0.4s;
   opacity: 0;
   transition: transform ease-in-out;
 }
@@ -229,7 +251,7 @@ h1 {
 h2 {
   font-size: 42px;
   margin-bottom: 40px;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 .flex {
@@ -530,10 +552,8 @@ footer nav a:hover {
     padding: 16px 5%;
   }
 
-  #toggle {
-    padding: 16px;
-    margin: 0;
-    display: inline-block;
+  .toggle-switch {
+    margin: 16px;
   }
 
   .burger {
@@ -675,15 +695,21 @@ footer nav a:hover {
 
 
 /* --- Animations --- */
-@keyframes fade-up {
-  from {opacity: 0; transform: translateY(80px);}
-  to {opacity: 1; transform: translateY(0);}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.animate {
-  animation-name: fade-up;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
+.fade-in-up {
+  opacity: 0;
+}
+
+.fade-in-up.animate {
+  animation: fadeInUp 0.5s ease-out forwards;
 }
