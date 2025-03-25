@@ -1,14 +1,11 @@
-import React, { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
+import { useScrollAnimation } from "../components/useScrollAnimation";
 
 function Contact() {
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // Initialize AOS
-  }, []);
+  useScrollAnimation(".fade-in-up");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,20 +28,20 @@ function Contact() {
   return (
     <div>
         <div id="contact">
-            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50">
+            <div className="fade-in-up">
               <FontAwesomeIcon icon={faComments} />
             </div>
-            <h2 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100">Contact Me</h2>
-            <p className="text" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="150">If you have any questions or would like to discuss a project,<br></br> feel free to reach out.</p>
+            <h2 className="fade-in-up">Contact Me</h2>
+            <p className="fade-in-up text" style={{ animationDelay: "0.1s" }}>If you have any questions or would like to discuss a project,<br></br> feel free to reach out.</p>
             <form name="contact" method="post" onSubmit={handleSubmit}>
               <div className="flex-form">
                 <input type="hidden" name="form-name" value="contact"></input>
-                <input type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z ]+" title="Only letters are allowed" required data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="200"></input>
-                <input type="email" id="email" name="email" placeholder="Enter email" required data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="250"></input>
+                <input type="text" id="name" name="name" placeholder="Name" pattern="[A-Za-z ]+" title="Only letters are allowed" required className="fade-in-up" style={{ animationDelay: "0.2s" }}></input>
+                <input type="email" id="email" name="email" placeholder="Enter email" required className="fade-in-up" style={{ animationDelay: "0.3s" }}></input>
               </div>
                 
-                <textarea name="message" id="message" placeholder="How may I help?" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="300"></textarea>
-                <button type="submit" name="submit" value="Send Message" className="btn" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="350">Send Message</button>
+                <textarea name="message" id="message" placeholder="How may I help?" className="fade-in-up" style={{ animationDelay: "0.4s" }}></textarea>
+                <button type="submit" name="submit" value="Send Message" className="fade-in-up btn" style={{ animationDelay: "0.5s" }}>Send Message</button>
             </form>
         </div>
     </div>

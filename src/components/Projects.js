@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from "react";
 import Project1 from '../img/project1.webp';
 import Project2 from '../img/project2.webp';
 import Project3 from '../img/project3.webp';
@@ -10,22 +8,21 @@ import Project6 from '../img/project6.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCubes } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { useScrollAnimation } from "../components/useScrollAnimation";
 
 function Projects() {
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // Initialize AOS
-  }, []);
+  useScrollAnimation(".fade-in-up");
 
   return (
     <div>
         <div id="projects">
-            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50">
+            <div className="fade-in-up">
               <FontAwesomeIcon icon={faCubes} />
             </div>
-            <h2 data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100">My Projects</h2>
+            <h2 className="fade-in-up">My Projects</h2>
             <div className="container">
-              <div className="card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="150">
+              <div className="fade-in-up card" style={{ animationDelay: "0.1s" }}>
                 <a href="http://www.scaryplacesnearme.com" target="_blank" rel="noreferrer">
                   <img src={Project1} alt="scaryplacesnearme.com" />
                   <div className="overlay">
@@ -35,7 +32,7 @@ function Projects() {
                   </div>
                 </a>
               </div>
-              <div className="card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="200">
+              <div className="fade-in-up card" style={{ animationDelay: "0.2s" }}>
                 <a href="https://www.haysclaysco.com" target="_blank" rel="noreferrer">
                   <img src={Project2} alt="haysclaysco.com" />
                   <div className="overlay">
@@ -45,7 +42,7 @@ function Projects() {
                   </div>
                 </a>
               </div>
-              <div className="card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="250">
+              <div className="fade-in-up card" style={{ animationDelay: "0.3s" }}>
                 <a href="https://www.championtowandtransport.com" target="_blank" rel="noreferrer">
                   <img src={Project3} alt="championtowandtransport.com" />
                   <div className="overlay">
@@ -55,7 +52,7 @@ function Projects() {
                   </div>
                 </a>
               </div>
-              <div className="card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="300">
+              <div className="fade-in-up card" style={{ animationDelay: "0.4s" }}>
                 <a href="https://codepen.io/JaseySmith/full/wvjrJvg" target="_blank" rel="noreferrer">
                   <img src={Project4} alt="To-do List" />
                   <div className="overlay">
@@ -65,7 +62,7 @@ function Projects() {
                   </div>
                 </a>
               </div>
-              <div className="card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="350">
+              <div className="fade-in-up card" style={{ animationDelay: "0.5s" }}>
                 <a href="https://codepen.io/JaseySmith/full/NWrQGba" target="_blank" rel="noreferrer">
                   <img src={Project5} alt="Random Quote Machine" />
                   <div className="overlay">
@@ -75,7 +72,7 @@ function Projects() {
                   </div>
                 </a>
               </div>
-              <div className="card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="400">
+              <div className="fade-in-up card" style={{ animationDelay: "0.6s" }}>
                 <a href="https://codepen.io/JaseySmith/full/MWjYWzr" target="_blank" rel="noreferrer">
                   <img src={Project6} alt="Pomodoro Timer" />
                   <div className="overlay">

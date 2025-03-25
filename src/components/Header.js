@@ -21,9 +21,8 @@ export default function Header() {
       <div className="header-container">
         {/* Logo */}
         <div className="logo-container">
-          <a id="logo" href="index.html">
-            <div className="j">J</div>
-            <div className="s">S</div>
+          <a href="index.html">
+            <div id="logo">JS</div>
           </a>
         </div>
 
