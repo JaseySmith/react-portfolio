@@ -26,6 +26,7 @@ function Projects() {
                 <a href="http://www.scaryplacesnearme.com" target="_blank" rel="noreferrer">
                   <img src={Project1} alt="scaryplacesnearme.com" />
                   <div className="overlay">
+                    <h3>Scary Places Near Me</h3>
                     <p className="green-bkg"><span>React</span><span>Node</span><span>Express</span></p>
                     <p className="text">An entertainment app with an interactive database for learning about scary places around the globe.</p>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -36,6 +37,7 @@ function Projects() {
                 <a href="https://www.haysclaysco.com" target="_blank" rel="noreferrer">
                   <img src={Project2} alt="haysclaysco.com" />
                   <div className="overlay">
+                    <h3>Hays Clay & Co</h3>
                     <p className="green-bkg"><span>Shopify</span><span>HTML</span><span>CSS</span></p>
                     <p className="text">An Ecommerce website built using the Debut theme with custom HTML/CSS and plug-ins for added features.</p>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -46,6 +48,7 @@ function Projects() {
                 <a href="https://www.championtowandtransport.com" target="_blank" rel="noreferrer">
                   <img src={Project3} alt="championtowandtransport.com" />
                   <div className="overlay">
+                    <h3>Champion Tow & Transport</h3>
                     <p className="green-bkg"><span>WordPress</span><span>HTML</span><span>CSS</span></p>
                     <p className="text">A business website built using the Astra theme with custom HTML/CSS and plug-ins for added features.</p>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -56,6 +59,7 @@ function Projects() {
                 <a href="https://codepen.io/JaseySmith/full/wvjrJvg" target="_blank" rel="noreferrer">
                   <img src={Project4} alt="To-do List" />
                   <div className="overlay">
+                    <h3>To-do List App</h3>
                     <p className="green-bkg"><span>React</span><span>CSS</span></p>
                     <p className="text">An efficient to-do list for seamlessly managing tasks in a minimalist interface.</p>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -66,6 +70,7 @@ function Projects() {
                 <a href="https://codepen.io/JaseySmith/full/NWrQGba" target="_blank" rel="noreferrer">
                   <img src={Project5} alt="Random Quote Machine" />
                   <div className="overlay">
+                    <h3>Random Quote Machine</h3>
                     <p className="green-bkg"><span>React</span><span>CSS</span></p>
                     <p className="text">A random quote machine that generates a random inspirational quote using fetch API.</p>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -76,6 +81,7 @@ function Projects() {
                 <a href="https://codepen.io/JaseySmith/full/MWjYWzr" target="_blank" rel="noreferrer">
                   <img src={Project6} alt="Pomodoro Timer" />
                   <div className="overlay">
+                    <h3>Pomodoro Timer</h3>
                     <p className="green-bkg"><span>React</span><span>CSS</span></p>
                     <p className="text">A digital timer used for maximizing efficiency in an office workplace environment.</p>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
